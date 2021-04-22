@@ -1,0 +1,10 @@
+<nav class="navbar navbar-dark bg-light border-bottom">
+  <h4>Wikinimous</h4>
+  <%= link_to 'Create', new_article_path %>
+</nav>
+<div class = "container mt-5">
+<% @article.each do |article| %>
+  <h4><%= link_to article.title, article_path(article) %></h4>
+  <p><%= article.content %></p>
+<% end %>
+</div>
